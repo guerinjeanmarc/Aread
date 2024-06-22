@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+#game-container {
+    display: flex;
+    gap: 20px;
+}
+#main-game {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#lowercase-letter {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+#options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+button {
+    font-size: 36px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:disabled {
+    color: #888;
+    cursor: not-allowed;
+}
+#image-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+#cover-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.cover-square {
+    background-color: #333;
+    transition: opacity 0.3s ease;
+}
+#learned-letters {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 24px;
+    text-align: left;
+}
+#restart-button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
